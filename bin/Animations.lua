@@ -1,5 +1,5 @@
 
-local Figure = game.Players.LocalPlayer.Character
+local Figure = game:GetService("Players").LocalPlayer.Character
 local Animate = Figure:FindFIrstChild("Animate")
 local Torso = Figure:WaitForChild("Torso")
 local RightShoulder = Torso:WaitForChild("Right Shoulder")
