@@ -116,7 +116,10 @@ if ReanimSettings.ToolFling then -- [[ Tool Flinging ]] --
 		Highlight.FillTransparency = 0.1
 		Highlight.FillColor = Color3.fromRGB(52, 235, 195)
 		Global.ReanimateData.FlingPart = FlingPart
-
+		if Backpack then
+			Backpack:ClearAllChildren()
+		end
+		
 		fdelay(WaitTime+1, function()
 			FlingPart.Massless = true
 			Highlight.Parent = FlingPart
@@ -604,7 +607,7 @@ do -- [[ Finishing Touches ]] --
 
 	local Credit = IN("Message")
 	Credit.Text = [[Reanimation Loaded! If something fails try again. 
-	https://discord.gg/A7VexVaZDA | Version: 1.1.0
+	https://discord.gg/A7VexVaZDA | Version: 1.1.1
 	Made by Gelatek, Lay and TimedMarch]]
 	Credit.Parent = workspace.Camera
 	fdelay(5, function()
